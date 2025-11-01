@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juran Roger C | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #000000;
+            --accent-color: #00ffff;
+            --accent-glow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
+            --card-bg: rgba(15, 15, 15, 0.8);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+            box-shadow: var(--accent-glow);
+        }
+
+        .btn:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            transition: var(--transition);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+            margin-left: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        #home {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .typewriter {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            min-height: 60px;
+        }
+
+        .typewriter-text {
+            color: var(--accent-color);
+            font-weight: 600;
+            border-right: 2px solid var(--accent-color);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: var(--accent-color); }
+            50% { border-color: transparent; }
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 0 0 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            box-shadow: var(--accent-glow);
+        background-image: profile.png;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 1.2rem;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        .cert-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .cert-card .cert-details {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+
+        .cert-card .cert-date {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #aaaaaa;
+        }
+
+        .cert-actions {
+            margin-top: 20px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 10px;
+            width: 90%;
+            height: 90%;
+            overflow: auto;
+            position: relative;
+            border: 2px solid var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            padding: 0;
+            height: calc(100% - 70px);
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        .project-img {
+            height: 200px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .project-img::before {
+            content: "SMART PARKING SYSTEM";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .project-modal-content {
+            width: 95%;
+            height: 95%;
+            max-width: 1200px;
+        }
+
+        .project-modal-body {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 70px);
+            padding: 0;
+        }
+
+        .project-tabs {
+            display: flex;
+            background: #222;
+            border-bottom: 1px solid #333;
+        }
+
+        .project-tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .project-tab.active {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .project-tab:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .project-tab-content {
+            flex: 1;
+            display: none;
+            overflow: auto;
+        }
+
+        .project-tab-content.active {
+            display: block;
+        }
+
+        .project-demo {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project-demo img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 10px;
+            border: 2px solid var(--accent-color);
+            box-shadow: var(--accent-glow);
+            margin-bottom: 20px;
+        }
+
+        .project-demo h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .java-code-container {
+            height: 100%;
+            padding: 20px;
+            background: #1e1e1e;
+            overflow: auto;
+        }
+
+        .java-code {
+            font-family: 'Courier New', monospace;
+            color: #d4d4d4;
+            white-space: pre;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .java-keyword {
+            color: #569cd6;
+        }
+
+        .java-string {
+            color: #ce9178;
+        }
+
+        .java-comment {
+            color: #6a9955;
+        }
+
+        .java-class {
+            color: #4ec9b0;
+        }
+
+        .java-method {
+            color: #dcdcaa;
+        }
+
+        .run-button {
+            margin-top: 20px;
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .run-button:hover {
+            background: #00cccc;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        }
+
+        .code-output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #2d2d2d;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-color);
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            color: #d4d4d4;
+        }
+
+        .parking-demo {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .parking-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .parking-spot {
+            width: 100px;
+            height: 150px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .parking-spot.available {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .parking-spot.occupied {
+            background: #f44336;
+            color: white;
+        }
+
+        .parking-controls {
+            margin: 20px 0;
+        }
+
+        .parking-controls input {
+            padding: 10px;
+            margin: 0 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: var(--card-bg);
+            color: var(--primary-color);
+        }
+
+        .parking-controls button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .park-park {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .park-unpark {
+            background: #f44336;
+            color: white;
+        }
+
+        .resume-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .resume-download {
+            margin-top: 30px;
+        }
+
+        .resume-download .btn {
+            font-size: 1.1rem;
+            padding: 15px 40px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            width: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: var(--secondary-color);
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 12px 15px;
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 5px;
+            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+
+        footer {
+            background: #111;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .typewriter {
+                font-size: 1.5rem;
+            }
+            
+            .project-tabs {
+                flex-direction: column;
+            }
+            
+            .parking-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .typewriter {
+                font-size: 1.3rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .projects-container,
+            .certifications-container,
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .parking-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">JR<span>.</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hey, I'm Roger<br><span>B.Tech IT Student & Tech Enthusiast</span></h1>
+                <p class="tagline">I love building smart systems and exploring modern technologies.</p>
+                <div class="typewriter">
+                    <span class="typewriter-text"></span>
+                </div>
+                <!-- REMOVED: "View My Work" button has been removed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate B.Tech Information Technology student with a strong interest in software development, emerging technologies, and problem-solving. My journey in tech started with curiosity about how things work, and it has evolved into a drive to create innovative solutions.</p>
+                    <p>I enjoy exploring different programming languages and frameworks, always looking for opportunities to expand my knowledge and apply my skills to real-world challenges. When I'm not coding, you can find me reading about the latest tech trends or working on personal projects.</p>
+                    <p>My goal is to become a skilled software developer who can contribute to meaningful projects that make a positive impact.</p>
+                </div>
+                <div class="about-image">
+                    <div class="profile-img.jpg">
+                        <span>Profile gd</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card fade-in">
+                    <i class="fas fa-code"></i>
+                    <h3>C Programming</h3>
+                    <p>Strong foundation in C programming with experience in algorithm implementation and system-level programming.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Proficient in Python for scripting, automation, and developing applications with various libraries and frameworks.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>Beginner level experience with Java, focusing on object-oriented programming concepts and application development.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Data Structures</h3>
+                    <p>Solid understanding of fundamental data structures including arrays, linked lists, stacks, queues, and trees.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Arduino</h3>
+                    <p>Experience with Arduino for IoT projects, sensor integration, and prototyping electronic systems.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Proficient in version control using Git and GitHub for collaborative development and project management.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>VS Code</h3>
+                    <p>Expertise in using VS Code as primary code editor with various extensions for efficient development workflow.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <i class="fas fa-atom"></i>
+                    <h3>Quantum Computing</h3>
+                    <p>Basic understanding of quantum computing principles, qubits, and quantum algorithms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="certifications-container">
+                <div class="cert-card fade-in">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Basics of Data Structures and Algorithms</p>
+                    <div class="cert-details">
+                        <p><strong>Issuer:</strong> Simplilearn SkillUp</p>
+                        <p><strong>Certificate Code:</strong> 8578029</p>
+                    </div>
+                    <div class="cert-date">
+                        <p><strong>Completed:</strong> 5th July 2025</p>
+                    </div>
+                    <div class="cert-actions">
+                        <button class="btn btn-small view-certificate" data-cert="dsa">View Certificate</button>
+                    </div>
+                </div>
+                <div class="cert-card fade-in">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Power BI</h3>
+                    <p>AI-Powered Interactive Dashboards</p>
+                    <div class="cert-details">
+                        <p><strong>Issuer:</strong> OfficeMaster</p>
+                        <p><strong>Workshop:</strong> Power BI</p>
+                    </div>
+                    <div class="cert-date">
+                        <p><strong>Completed:</strong> 18th May 2025</p>
+                    </div>
+                    <div class="cert-actions">
+                        <button class="btn btn-small view-certificate" data-cert="powerbi">View Certificate</button>
+                    </div>
+                </div>
+                <div class="cert-card fade-in">
+                    <i class="fas fa-atom"></i>
+                    <h3>Quantum Computing</h3>
+                    <p>Introduction to Quantum Computing</p>
+                    <div class="cert-details">
+                        <p><strong>Issuer:</strong> OpenLearn</p>
+                        <p><strong>Course Code:</strong> SM380_1</p>
+                    </div>
+                    <div class="cert-date">
+                        <p><strong>Completed:</strong> 22nd June 2025</p>
+                    </div>
+                    <div class="cert-actions">
+                        <button class="btn btn-small view-certificate" data-cert="quantum">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modals -->
+    <div class="modal" id="certificate-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Certificate Details</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe class="pdf-viewer" id="pdf-viewer" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card fade-in">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3>Smart Car Parking System</h3>
+                        <p>An Object-Oriented Programming project developed with Java that simulates a smart parking system with automated slot allocation and payment processing. The system efficiently manages parking spaces and provides real-time availability information.</p>
+                        <div class="project-links">
+                            <button class="btn btn-small view-project">View Project</button>
+                            <button class="btn btn-small view-source">Source Code</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+        <div class="modal-content project-modal-content">
+            <div class="modal-header">
+                <h3>Smart Car Parking System</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="project-modal-body">
+                <div class="project-tabs">
+                    <button class="project-tab active" data-tab="demo">Project Demo</button>
+                    <button class="project-tab" data-tab="source">Source Code</button>
+                </div>
+                <div class="project-tab-content active" id="demo-tab">
+                    <div class="parking-demo">
+                        <h3>Smart Parking System Demo</h3>
+                        <p>This is a simulation of the Java-based Smart Parking System. You can park and unpark vehicles to see how the system works.</p>
+                        
+                        <div class="parking-controls">
+                            <input type="text" id="vehicle-number" placeholder="Enter vehicle number">
+                            <button class="park-park" onclick="parkVehicle()">Park Vehicle</button>
+                            <button class="park-unpark" onclick="unparkVehicle()">Unpark Vehicle</button>
+                        </div>
+                        
+                        <div class="code-output" id="parking-output">
+                            Welcome to Smart Parking System! Available spots: 20/20
+                        </div>
+                        
+                        <div class="parking-grid" id="parking-grid">
+                            <!-- Parking spots will be generated here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="project-tab-content" id="source-tab">
+                    <div class="java-code-container">
+                        <pre class="java-code" id="java-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <div class="resume-container fade-in">
+                <p>Download my resume to learn more about my education, experience, and skills.</p>
+                <div class="resume-download">
+                    <a href="Juran Roger.pdf" class="btn" download="Juran_Roger_Resume.pdf">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Feel free to reach out if you're looking for a developer, have any questions, or just want to connect.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rogercollins006@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>9677278329</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Chennai, India</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Juran Roger. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smart Parking System Simulation
+        class ParkingSpot {
+            constructor(id) {
+                this.id = id;
+                this.occupied = false;
+                this.vehicleNumber = null;
+                this.entryTime = null;
+            }
+            
+            park(vehicleNumber) {
+                this.occupied = true;
+                this.vehicleNumber = vehicleNumber;
+                this.entryTime = new Date();
+            }
+            
+            unpark() {
+                this.occupied = false;
+                this.vehicleNumber = null;
+                const exitTime = new Date();
+                const duration = exitTime - this.entryTime;
+                const hours = Math.ceil(duration / (1000 * 60 * 60));
+                this.entryTime = null;
+                return hours * 2.5; // $2.50 per hour
+            }
+        }
+
+        class ParkingLot {
+            constructor(capacity) {
+                this.capacity = capacity;
+                this.spots = [];
+                for (let i = 1; i <= capacity; i++) {
+                    this.spots.push(new ParkingSpot(i));
+                }
+            }
+            
+            parkVehicle(vehicleNumber) {
+                // Check if vehicle is already parked
+                for (const spot of this.spots) {
+                    if (spot.occupied && spot.vehicleNumber === vehicleNumber) {
+                        return null;
+                    }
+                }
+                
+                // Find available spot
+                for (const spot of this.spots) {
+                    if (!spot.occupied) {
+                        spot.park(vehicleNumber);
+                        return spot;
+                    }
+                }
+                return null;
+            }
+            
+            unparkVehicle(vehicleNumber) {
+                for (const spot of this.spots) {
+                    if (spot.occupied && spot.vehicleNumber === vehicleNumber) {
+                        const fee = spot.unpark();
+                        return fee;
+                    }
+                }
+                return -1;
+            }
+            
+            getAvailableSpots() {
+                return this.spots.filter(spot => !spot.occupied).length;
+            }
+            
+            isFull() {
+                return this.getAvailableSpots() === 0;
+            }
+        }
+
+        // Initialize parking lot
+        const parkingLot = new ParkingLot(20);
+
+        // Initialize parking grid
+        function initializeParkingGrid() {
+            const grid = document.getElementById('parking-grid');
+            grid.innerHTML = '';
+            
+            parkingLot.spots.forEach(spot => {
+                const spotElement = document.createElement('div');
+                spotElement.className = `parking-spot ${spot.occupied ? 'occupied' : 'available'}`;
+                spotElement.innerHTML = `
+                    <div>Spot ${spot.id}</div>
+                    ${spot.occupied ? `<div>${spot.vehicleNumber}</div>` : '<div>Available</div>'}
+                `;
+                grid.appendChild(spotElement);
+            });
+            
+            updateParkingOutput(`Available spots: ${parkingLot.getAvailableSpots()}/${parkingLot.capacity}`);
+        }
+
+        function parkVehicle() {
+            const vehicleNumber = document.getElementById('vehicle-number').value.trim().toUpperCase();
+            
+            if (!vehicleNumber) {
+                updateParkingOutput('Please enter a vehicle number');
+                return;
+            }
+            
+            if (parkingLot.isFull()) {
+                updateParkingOutput('Parking lot is full!');
+                return;
+            }
+            
+            const spot = parkingLot.parkVehicle(vehicleNumber);
+            
+            if (spot) {
+                updateParkingOutput(`Vehicle ${vehicleNumber} parked at Spot ${spot.id}`);
+                initializeParkingGrid();
+            } else {
+                updateParkingOutput(`Vehicle ${vehicleNumber} is already parked`);
+            }
+            
+            document.getElementById('vehicle-number').value = '';
+        }
+
+        function unparkVehicle() {
+            const vehicleNumber = document.getElementById('vehicle-number').value.trim().toUpperCase();
+            
+            if (!vehicleNumber) {
+                updateParkingOutput('Please enter a vehicle number');
+                return;
+            }
+            
+            const fee = parkingLot.unparkVehicle(vehicleNumber);
+            
+            if (fee >= 0) {
+                updateParkingOutput(`Vehicle ${vehicleNumber} unparked. Parking fee: $${fee.toFixed(2)}`);
+                initializeParkingGrid();
+            } else {
+                updateParkingOutput(`Vehicle ${vehicleNumber} not found`);
+            }
+            
+            document.getElementById('vehicle-number').value = '';
+        }
+
+        function updateParkingOutput(message) {
+            document.getElementById('parking-output').textContent = message;
+        }
+
+        // Typewriter Effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const typewriterText = document.querySelector('.typewriter-text');
+            const texts = ['Programmer', 'Developer', 'Tech Enthusiast', 'Problem Solver', 'Learner'];
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function type() {
+                const currentText = texts[textIndex];
+                
+                if (isDeleting) {
+                    typewriterText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 50;
+                } else {
+                    typewriterText.textContent = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 100;
+                }
+
+                if (!isDeleting && charIndex === currentText.length) {
+                    isDeleting = true;
+                    typingSpeed = 1000;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % texts.length;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(type, typingSpeed);
+            }
+
+            setTimeout(type, 1000);
+
+            // Sticky Header
+            window.addEventListener('scroll', function() {
+                const header = document.getElementById('header');
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                menuToggle.querySelector('i').classList.toggle('fa-bars');
+                menuToggle.querySelector('i').classList.toggle('fa-times');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.add('fa-bars');
+                    menuToggle.querySelector('i').classList.remove('fa-times');
+                });
+            });
+
+            // Fade-in Animation on Scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => {
+                fadeInObserver.observe(element);
+            });
+
+            // Form Submission
+            const contactForm = document.querySelector('.contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            });
+
+            // Certificate Modal Functionality
+            const modal = document.getElementById('certificate-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const pdfViewer = document.getElementById('pdf-viewer');
+            const closeModal = document.querySelectorAll('.close-modal');
+            const viewCertificateButtons = document.querySelectorAll('.view-certificate');
+
+            // Certificate data
+            const certificates = {
+                dsa: {
+                    title: 'Data Structures & Algorithms Certificate',
+                    file: 'Dsa.pdf'
+                },
+                powerbi: {
+                    title: 'Power BI Certificate',
+                    file: 'power bi.pdf'
+                },
+                quantum: {
+                    title: 'Quantum Computing Certificate',
+                    file: 'quantum computing.pdf'
+                }
+            };
+
+            // Open certificate modal
+            viewCertificateButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const certType = this.getAttribute('data-cert');
+                    const certData = certificates[certType];
+                    
+                    if (certData) {
+                        modalTitle.textContent = certData.title;
+                        pdfViewer.src = certData.file;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            // Project Modal Functionality
+            const projectModal = document.getElementById('project-modal');
+            const viewProjectButton = document.querySelector('.view-project');
+            const viewSourceButton = document.querySelector('.view-source');
+            const projectTabs = document.querySelectorAll('.project-tab');
+            const projectTabContents = document.querySelectorAll('.project-tab-content');
+
+            // Java code for display
+            const javaCode = `// Your Smart Car Parking System Java code would be displayed here
+// This is a simplified version for demonstration
+
+public class SmartParkingSystem {
+    public static void main(String[] args) {
+        System.out.println("Smart Parking System Started");
+        
+        // Parking lot with 20 spots
+        ParkingLot parkingLot = new ParkingLot(20);
+        
+        // Park a vehicle
+        String vehicle1 = "ABC123";
+        ParkingSpot spot = parkingLot.parkVehicle(vehicle1);
+        
+        if (spot != null) {
+            System.out.println("Vehicle " + vehicle1 + " parked at spot " + spot.getSpotId());
+        }
+        
+        // Unpark the vehicle
+        double fee = parkingLot.unparkVehicle(vehicle1);
+        if (fee >= 0) {
+            System.out.println("Vehicle " + vehicle1 + " unparked. Fee: $" + fee);
+        }
+    }
+}`;
+
+            // Display Java code
+            document.getElementById('java-code').textContent = javaCode;
+
+            // Open project modal
+            viewProjectButton.addEventListener('click', function() {
+                projectModal.classList.add('active');
+                initializeParkingGrid();
+            });
+
+            // Open source code tab
+            viewSourceButton.addEventListener('click', function() {
+                projectModal.classList.add('active');
+                // Switch to source code tab
+                projectTabs.forEach(tab => tab.classList.remove('active'));
+                projectTabContents.forEach(content => content.classList.remove('active'));
+                document.querySelector('.project-tab[data-tab="source"]').classList.add('active');
+                document.getElementById('source-tab').classList.add('active');
+            });
+
+            // Tab switching
+            projectTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabName = this.getAttribute('data-tab');
+                    
+                    projectTabs.forEach(t => t.classList.remove('active'));
+                    projectTabContents.forEach(c => c.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(`${tabName}-tab`).classList.add('active');
+                });
+            });
+
+            // Close modals
+            closeModal.forEach(button => {
+                button.addEventListener('click', function() {
+                    modal.classList.remove('active');
+                    projectModal.classList.remove('active');
+                    pdfViewer.src = '';
+                });
+            });
+
+            // Close modal when clicking outside
+            [modal, projectModal].forEach(modalElement => {
+                modalElement.addEventListener('click', function(e) {
+                    if (e.target === modalElement) {
+                        modalElement.classList.remove('active');
+                        pdfViewer.src = '';
+                    }
+                });
+            });
+
+            // Simple Particle Background
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const particlesContainer = document.getElementById('particles-js');
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particlesContainer.appendChild(canvas);
+            
+            const particles = [];
+            const particleCount = 50;
+            
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 2 + 1;
+                    this.speedX = Math.random() * 1 - 0.5;
+                    this.speedY = Math.random() * 1 - 0.5;
+                }
+                
+                update() {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    
+                    if (this.x > canvas.width) this.x = 0;
+                    else if (this.x < 0) this.x = canvas.width;
+                    
+                    if (this.y > canvas.height) this.y = 0;
+                    else if (this.y < 0) this.y = canvas.height;
+                }
+                
+                draw() {
+                    ctx.fillStyle = 'rgba(0, 255, 255, 0.5)';
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+            
+            function initParticles() {
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+            
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                    particles[i].draw();
+                    
+                    // Draw lines between particles
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 100) {
+                            ctx.beginPath();
+                            ctx.strokeStyle = `rgba(0, 255, 255, ${0.2 - distance/500})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                
+                requestAnimationFrame(animateParticles);
+            }
+            
+            // Initialize and animate particles
+            initParticles();
+            animateParticles();
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        });
+    </script>
+</body>
+</html>
