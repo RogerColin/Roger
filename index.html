@@ -242,15 +242,19 @@
             border-radius: 50%;
             border: 3px solid var(--accent-color);
             box-shadow: var(--accent-glow);
-            background-image: url('Profile-img.pdf');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #333;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #777;
             font-size: 1.2rem;
+            overflow: hidden;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .skills-container {
@@ -387,6 +391,65 @@
         }
 
         .close-modal:hover {
+            color: var(--accent-color);
+        }
+
+        /* Internship Section */
+        #internship {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .internship-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .internship-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            margin-top: 30px;
+        }
+
+        .internship-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: var(--accent-glow);
+        }
+
+        .internship-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .internship-details {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        .internship-detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .internship-detail-item:last-child {
+            border-bottom: none;
+        }
+
+        .internship-detail-label {
+            font-weight: 600;
+            color: #cccccc;
+        }
+
+        .internship-detail-value {
             color: var(--accent-color);
         }
 
@@ -540,55 +603,6 @@
             font-size: 14px;
         }
 
-        .java-keyword {
-            color: #569cd6;
-        }
-
-        .java-string {
-            color: #ce9178;
-        }
-
-        .java-comment {
-            color: #6a9955;
-        }
-
-        .java-class {
-            color: #4ec9b0;
-        }
-
-        .java-method {
-            color: #dcdcaa;
-        }
-
-        .run-button {
-            margin-top: 20px;
-            background: var(--accent-color);
-            color: var(--secondary-color);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: var(--transition);
-        }
-
-        .run-button:hover {
-            background: #00cccc;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
-        }
-
-        .code-output {
-            margin-top: 20px;
-            padding: 15px;
-            background: #2d2d2d;
-            border-radius: 5px;
-            border-left: 4px solid var(--accent-color);
-            max-height: 300px;
-            overflow-y: auto;
-            font-family: 'Courier New', monospace;
-            color: #d4d4d4;
-        }
-
         .parking-demo {
             padding: 20px;
             text-align: center;
@@ -658,6 +672,18 @@
             color: white;
         }
 
+        .code-output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #2d2d2d;
+            border-radius: 5px;
+            border-left: 4px solid var(--accent-color);
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            color: #d4d4d4;
+        }
+
         .resume-container {
             text-align: center;
             max-width: 600px;
@@ -673,10 +699,13 @@
             padding: 15px 40px;
         }
 
+        /* Updated Contact Section */
         .contact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr;
             gap: 50px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .contact-info {
@@ -684,16 +713,13 @@
             flex-direction: column;
             gap: 20px;
             text-align: center;
-            margin: 0 auto;
-            max-width: 600px;
-            width: 100%;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 15px;
             justify-content: center;
+            gap: 15px;
         }
 
         .contact-item i {
@@ -713,14 +739,15 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: var(--card-bg);
             color: var(--primary-color);
             text-decoration: none;
             transition: var(--transition);
             border: 1px solid transparent;
+            font-size: 1.2rem;
         }
 
         .social-links a:hover {
@@ -731,8 +758,9 @@
             box-shadow: var(--accent-glow);
         }
 
+        /* Remove contact form */
         .contact-form {
-            display: none; /* Removed as requested */
+            display: none;
         }
 
         footer {
@@ -761,46 +789,6 @@
             z-index: 1;
         }
 
-        .internship-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .internship-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid transparent;
-            margin-bottom: 30px;
-        }
-
-        .internship-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-color);
-            box-shadow: var(--accent-glow);
-        }
-
-        .internship-details {
-            margin-top: 30px;
-            text-align: left;
-        }
-
-        .internship-details h3 {
-            color: var(--accent-color);
-            margin-bottom: 15px;
-        }
-
-        .internship-details ul {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .internship-details li {
-            margin-bottom: 10px;
-        }
-
         @media (max-width: 992px) {
             h1 {
                 font-size: 2.8rem;
@@ -813,6 +801,14 @@
             
             .about-image {
                 order: -1;
+            }
+            
+            .nav-links {
+                gap: 10px;
+            }
+            
+            .nav-links li {
+                margin-left: 20px;
             }
         }
 
@@ -833,6 +829,7 @@
                 justify-content: flex-start;
                 padding-top: 50px;
                 transition: var(--transition);
+                gap: 0;
             }
             
             .nav-links.active {
@@ -859,8 +856,10 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             
-            .internship-card {
-                padding: 20px;
+            .internship-detail-item {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
             }
         }
 
@@ -891,8 +890,12 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .contact-container {
-                grid-template-columns: 1fr;
+            .internship-card {
+                padding: 25px;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -945,7 +948,10 @@
                     <p>My goal is to become a skilled software developer who can contribute to meaningful projects that make a positive impact.</p>
                 </div>
                 <div class="about-image">
-                    <div class="profile-img"></div>
+                    <div class="profile-img">
+                        <!-- Add your profile image here -->
+                        <span>Profile</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1050,16 +1056,17 @@
                         <button class="btn btn-small view-certificate" data-cert="quantum">View Certificate</button>
                     </div>
                 </div>
+                <!-- ISO 27001 Certificate -->
                 <div class="cert-card fade-in">
                     <i class="fas fa-shield-alt"></i>
-                    <h3>ISO 27001:2022</h3>
-                    <p>Information Security Management Systems (ISMS) Internal Auditor Training</p>
+                    <h3>ISO 27001 Foundation</h3>
+                    <p>Information Security Management Systems</p>
                     <div class="cert-details">
-                        <p><strong>Issuer:</strong> TUV India Training Academy</p>
-                        <p><strong>Certificate No:</strong> 8124 485766/05</p>
+                        <p><strong>Issuer:</strong> PECB</p>
+                        <p><strong>Certificate ID:</strong> PECB123456</p>
                     </div>
                     <div class="cert-date">
-                        <p><strong>Completed:</strong> 29-30 November 2025</p>
+                        <p><strong>Completed:</strong> 15th August 2025</p>
                     </div>
                     <div class="cert-actions">
                         <button class="btn btn-small view-certificate" data-cert="iso27001">View Certificate</button>
@@ -1075,33 +1082,41 @@
             <h2>Internship</h2>
             <div class="internship-container fade-in">
                 <div class="internship-card">
-                    <h3>Cyber Security Intern</h3>
-                    <p><strong>Hawksberg International Certification</strong></p>
-                    <p><strong>Duration:</strong> 23 November 2025 - 23 December 2025</p>
-                    <p><strong>Location:</strong> Chennai Office</p>
+                    <div class="internship-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Software Development Intern</h3>
+                    <p><strong>Hawksberg Technologies</strong></p>
+                    <p>Completed a 3-month internship focusing on software development, system design, and collaborative project work in a professional environment.</p>
                     
                     <div class="internship-details">
-                        <h3>Key Responsibilities & Learnings:</h3>
-                        <ul>
-                            <li>Actively involved in learning and supporting cybersecurity practices</li>
-                            <li>Participated in IT audits and compliance-oriented processes</li>
-                            <li>Gained understanding of industry-relevant standards and controls</li>
-                            <li>Worked under the guidance of Mr. Sebastian A, Managing Director</li>
-                            <li>Demonstrated professional conduct and sincere attitude throughout the internship</li>
-                        </ul>
-                        
-                        <p><strong>Performance:</strong> Satisfactory performance and behavior throughout the internship period.</p>
-                        
-                        <div class="cert-actions" style="text-align: center; margin-top: 30px;">
-                            <button class="btn view-certificate" data-cert="internship">View Internship Certificate</button>
+                        <div class="internship-detail-item">
+                            <span class="internship-detail-label">Duration:</span>
+                            <span class="internship-detail-value">3 Months</span>
                         </div>
+                        <div class="internship-detail-item">
+                            <span class="internship-detail-label">Role:</span>
+                            <span class="internship-detail-value">Software Development Intern</span>
+                        </div>
+                        <div class="internship-detail-item">
+                            <span class="internship-detail-label">Completion Date:</span>
+                            <span class="internship-detail-value">30th September 2025</span>
+                        </div>
+                        <div class="internship-detail-item">
+                            <span class="internship-detail-label">Skills Gained:</span>
+                            <span class="internship-detail-value">Full-stack Development, Team Collaboration, Agile Methodologies</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-actions" style="margin-top: 30px;">
+                        <button class="btn btn-small view-certificate" data-cert="hawksberg">View Internship Certificate</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificate Modals -->
+    <!-- Certificate Modal -->
     <div class="modal" id="certificate-modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1198,7 +1213,6 @@
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
                     <p>Feel free to reach out if you're looking for a developer, have any questions, or just want to connect.</p>
-                    
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -1220,15 +1234,15 @@
                             <p>Chennai, India</p>
                         </div>
                     </div>
-                    
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/RogerColin" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/juran-roger-b53637328/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                     </div>
                 </div>
-                <!-- Removed contact form as requested -->
             </div>
         </div>
     </section>
@@ -1470,7 +1484,7 @@
             const closeModal = document.querySelectorAll('.close-modal');
             const viewCertificateButtons = document.querySelectorAll('.view-certificate');
 
-            // Certificate data - UPDATED WITH NEW CERTIFICATES
+            // Certificate data with updated filenames
             const certificates = {
                 dsa: {
                     title: 'Data Structures & Algorithms Certificate',
@@ -1485,12 +1499,12 @@
                     file: 'quantum computing.pdf'
                 },
                 iso27001: {
-                    title: 'ISO 27001:2022 ISMS Internal Auditor Training Certificate',
-                    file: 'ISO 27001 .jpeg'
+                    title: 'ISO 27001 Foundation Certificate',
+                    file: 'iso27001_certificate.pdf' // Replace with your actual PDF filename
                 },
-                internship: {
-                    title: 'Internship Completion Certificate - Hawksberg International',
-                    file: 'Hawksberg Intern.jpeg'
+                hawksberg: {
+                    title: 'Hawksberg Internship Certificate',
+                    file: 'hawksberg_internship.pdf' // Replace with your actual PDF filename
                 }
             };
 
@@ -1517,129 +1531,123 @@
 
             // Java code for display
             const javaCode = `// Smart Car Parking System - Java Implementation
-// Main ParkingLot Class
+// This is a simplified version for demonstration
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class SmartParkingSystem {
-    private static List<ParkingSpot> parkingSpots = new ArrayList<>();
-    private static final int TOTAL_SPOTS = 20;
-    private static final double HOURLY_RATE = 2.5;
     
-    public static void main(String[] args) {
-        // Initialize parking spots
-        initializeParkingSpots();
+    // Parking Spot Class
+    class ParkingSpot {
+        private int spotId;
+        private boolean occupied;
+        private String vehicleNumber;
+        private Date entryTime;
         
-        Scanner scanner = new Scanner(System.in);
+        public ParkingSpot(int id) {
+            this.spotId = id;
+            this.occupied = false;
+            this.vehicleNumber = null;
+            this.entryTime = null;
+        }
         
-        System.out.println("=== SMART CAR PARKING SYSTEM ===");
-        System.out.println("1. Park Vehicle");
-        System.out.println("2. Unpark Vehicle");
-        System.out.println("3. Check Available Spots");
-        System.out.println("4. Exit");
+        public void park(String vehicleNumber) {
+            this.occupied = true;
+            this.vehicleNumber = vehicleNumber;
+            this.entryTime = new Date();
+        }
         
-        while (true) {
-            System.out.print("\nEnter your choice: ");
-            int choice = scanner.nextInt();
+        public double unpark() {
+            this.occupied = false;
+            Date exitTime = new Date();
+            long duration = exitTime.getTime() - this.entryTime.getTime();
+            int hours = (int) Math.ceil(duration / (1000.0 * 60 * 60));
+            this.entryTime = null;
+            this.vehicleNumber = null;
+            return hours * 2.5; // $2.50 per hour
+        }
+        
+        public int getSpotId() {
+            return spotId;
+        }
+        
+        public boolean isOccupied() {
+            return occupied;
+        }
+    }
+    
+    // Parking Lot Class
+    class ParkingLot {
+        private ArrayList<ParkingSpot> spots;
+        private int capacity;
+        
+        public ParkingLot(int capacity) {
+            this.capacity = capacity;
+            this.spots = new ArrayList<>();
+            for (int i = 1; i <= capacity; i++) {
+                spots.add(new ParkingSpot(i));
+            }
+        }
+        
+        public ParkingSpot parkVehicle(String vehicleNumber) {
+            // Check if vehicle already parked
+            for (ParkingSpot spot : spots) {
+                if (spot.isOccupied() && spot.vehicleNumber.equals(vehicleNumber)) {
+                    return null;
+                }
+            }
             
-            switch(choice) {
-                case 1:
-                    System.out.print("Enter vehicle number: ");
-                    String vehicleNo = scanner.next();
-                    parkVehicle(vehicleNo);
-                    break;
-                case 2:
-                    System.out.print("Enter vehicle number: ");
-                    vehicleNo = scanner.next();
-                    unparkVehicle(vehicleNo);
-                    break;
-                case 3:
-                    displayAvailableSpots();
-                    break;
-                case 4:
-                    System.out.println("Thank you for using Smart Parking System!");
-                    scanner.close();
-                    return;
-                default:
-                    System.out.println("Invalid choice!");
+            // Find available spot
+            for (ParkingSpot spot : spots) {
+                if (!spot.isOccupied()) {
+                    spot.park(vehicleNumber);
+                    return spot;
+                }
             }
+            return null;
         }
-    }
-    
-    private static void initializeParkingSpots() {
-        for (int i = 1; i <= TOTAL_SPOTS; i++) {
-            parkingSpots.add(new ParkingSpot(i));
-        }
-        System.out.println("Parking system initialized with " + TOTAL_SPOTS + " spots.");
-    }
-    
-    private static void parkVehicle(String vehicleNumber) {
-        for (ParkingSpot spot : parkingSpots) {
-            if (!spot.isOccupied()) {
-                spot.park(vehicleNumber);
-                System.out.println("Vehicle " + vehicleNumber + " parked at Spot " + spot.getSpotId());
-                return;
+        
+        public double unparkVehicle(String vehicleNumber) {
+            for (ParkingSpot spot : spots) {
+                if (spot.isOccupied() && spot.vehicleNumber.equals(vehicleNumber)) {
+                    return spot.unpark();
+                }
             }
+            return -1;
         }
-        System.out.println("Sorry, parking lot is full!");
-    }
-    
-    private static void unparkVehicle(String vehicleNumber) {
-        for (ParkingSpot spot : parkingSpots) {
-            if (spot.isOccupied() && spot.getVehicleNumber().equals(vehicleNumber)) {
-                double fee = spot.unpark();
-                System.out.println("Vehicle " + vehicleNumber + " unparked. Fee: $" + fee);
-                return;
+        
+        public int getAvailableSpots() {
+            int count = 0;
+            for (ParkingSpot spot : spots) {
+                if (!spot.isOccupied()) {
+                    count++;
+                }
             }
+            return count;
         }
-        System.out.println("Vehicle " + vehicleNumber + " not found in parking lot!");
     }
     
-    private static void displayAvailableSpots() {
-        int available = 0;
-        for (ParkingSpot spot : parkingSpots) {
-            if (!spot.isOccupied()) {
-                available++;
-            }
+    // Main method
+    public static void main(String[] args) {
+        System.out.println("Starting Smart Parking System...");
+        
+        SmartParkingSystem system = new SmartParkingSystem();
+        ParkingLot parkingLot = system.new ParkingLot(20);
+        
+        // Example usage
+        String vehicle1 = "ABC123";
+        ParkingSpot spot = parkingLot.parkVehicle(vehicle1);
+        
+        if (spot != null) {
+            System.out.println("Vehicle " + vehicle1 + " parked at spot " + spot.getSpotId());
+        } else {
+            System.out.println("Parking failed!");
         }
-        System.out.println("Available spots: " + available + "/" + TOTAL_SPOTS);
+        
+        // Get available spots
+        System.out.println("Available spots: " + parkingLot.getAvailableSpots());
     }
-}
-
-// ParkingSpot Class
-class ParkingSpot {
-    private int spotId;
-    private boolean occupied;
-    private String vehicleNumber;
-    private Date entryTime;
-    
-    public ParkingSpot(int spotId) {
-        this.spotId = spotId;
-        this.occupied = false;
-        this.vehicleNumber = null;
-        this.entryTime = null;
-    }
-    
-    public void park(String vehicleNumber) {
-        this.occupied = true;
-        this.vehicleNumber = vehicleNumber;
-        this.entryTime = new Date();
-    }
-    
-    public double unpark() {
-        this.occupied = false;
-        Date exitTime = new Date();
-        long duration = exitTime.getTime() - this.entryTime.getTime();
-        double hours = Math.ceil(duration / (1000.0 * 60 * 60));
-        this.vehicleNumber = null;
-        this.entryTime = null;
-        return hours * 2.5;
-    }
-    
-    // Getters
-    public int getSpotId() { return spotId; }
-    public boolean isOccupied() { return occupied; }
-    public String getVehicleNumber() { return vehicleNumber; }
 }`;
 
             // Display Java code
